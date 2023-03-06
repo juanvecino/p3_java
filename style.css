@@ -1,0 +1,17 @@
+.tabla_precios {
+    margin-top:10px;
+    border-collapse: collapse;
+    width: 30%;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333
+}
+.tabla_precios td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    vertical-align: middle;
+}
+#usd, #eur, #gbp {
+    font-weight: bold;
+}

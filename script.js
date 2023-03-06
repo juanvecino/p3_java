@@ -2,26 +2,25 @@ var historial = [];
 
 (function initialize(){
     actualizarPreciosBitcoin();
-    setInterval(actualizarPreciosBitcoin, 120000); // Recarga cada 2 minutos    
+    setInterval(actualizarPreciosBitcoin, 120000); // Recarga cada 2 minutos
+    document.getElementById("divisa").addEventListener("change", opciondivisas);    
 })();
-
-window.onload
 
 
 function opciondivisas(){
     var opcion = document.getElementById("divisa").value;
     if(opcion == "USD"){
-        document.getElementById("row-usd").style.display = "block";
+        document.getElementById("row-usd").style.display = "";
         document.getElementById("row-eur").style.display = "none";
         document.getElementById("row-gbp").style.display = "none";
     }else if(opcion == "EUR"){
         document.getElementById("row-usd").style.display = "none";
-        document.getElementById("row-eur").style.display = "block";
+        document.getElementById("row-eur").style.display = "";
         document.getElementById("row-gbp").style.display = "none";
     }else if(opcion == "GBP"){
         document.getElementById("row-usd").style.display = "none";
         document.getElementById("row-eur").style.display = "none";
-        document.getElementById("row-gbp").style.display = "block";
+        document.getElementById("row-gbp").style.display = "";
     }
 
 }
