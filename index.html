@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Bitcoin Price</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+
+</head>
+<body onload="opciondivisas()">
+    
+    <div>
+        <form onchange="opciondivisas()"> 
+            <label for="divisa">Escoge tu divisa:</label>
+            <select id="divisa">
+            <option value="EUR">EUR</option>
+            <option value="USD">USD</option>
+            <option value="GBP">GBP</option>
+            </select>
+        </form>
+    </div>
+
+    <table>
+        <tr>
+            Bitcoin
+        </tr>
+        <tr>
+            <td>Moneda</td>
+            <td>Precio</td>
+        </tr>
+        <tr id="row-usd">
+            <td>USD</td>
+            <td id="usd"></td>
+        </tr>
+        <tr id="row-eur">
+            <td>EUR</td>
+            <td id="eur"></td>
+        </tr>
+        <tr id="row-gbp">
+            <td>GBP</td>
+            <td id="gbp"></td>
+        </tr>
+    </table>
+    
+
+    <canvas id="myChart"></canvas>
+</body>
+</html>
+
+
+
+
