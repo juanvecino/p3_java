@@ -3,9 +3,11 @@ var historial = [];
 (function initialize(){
     actualizarPreciosBitcoin();
     setInterval(actualizarPreciosBitcoin, 120000); // Recarga cada 2 minutos
-    document.getElementById("divisa").addEventListener("change", opciondivisas);    
 })();
 
+window.onload = function() {
+  document.getElementById("divisa").addEventListener("change", opciondivisas);
+}
 
 function opciondivisas(){
     var opcion = document.getElementById("divisa").value;
